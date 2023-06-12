@@ -15,7 +15,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
   void getLocation() async {
     Location location = Location();
-    location.getCurrentLocation();
+    await location.getCurrentLocation();
+    print(location.latitude);
+    print(location.longitude);
   }
   @override
   Widget build(BuildContext context) {
